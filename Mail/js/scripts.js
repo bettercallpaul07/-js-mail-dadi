@@ -5,19 +5,18 @@
 const mailList = ["mail@pippo.it","mail@pluto.it","mail@paperino.it"];
 
 let myMail = prompt("Inserisci la tua e-mail");
+let validEmail = true
 
-console.log (mailList.length)
-console.log(mailList, typeof mailList);
-console.log(myMail, typeof myMail);
+//console.log (mailList.length)
+//console.log(mailList, typeof mailList);
+//console.log(myMail, typeof myMail);
 
-for (let i = 0; i < mailList.length; i++) {
+const access = mailList.includes(myMail)
 
-    if (mailList[i] == myMail) {
-        console.log(mailList[i], 'Presente');
-        break
-    }
-    else {
-        console.log("Assente");
-    }
+if(access== true) {
+    alert("Email valida")
+}
 
+else {
+    alert("Email non valiida.")
 }
